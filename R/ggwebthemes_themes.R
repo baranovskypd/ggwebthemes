@@ -4,8 +4,7 @@
 #'
 #' This theme can be customized using the same arguments as ggplot2::theme.
 #'
-#' @importFrom ggplot2 theme_bw
-#' @importFrom ggplot2 theme
+#' @import ggplot2
 #'
 #' @export
 #'
@@ -55,8 +54,7 @@ theme_web_bw <- function() {
 #'
 #' This theme can be customized using the same arguments as ggplot2::theme.
 #'
-#' @importFrom ggplot2 theme_classic
-#' @importFrom ggplot2 theme
+#' @import ggplot2
 #'
 #' @export
 #'
@@ -104,8 +102,7 @@ theme_web_classic <- function() {
 #'
 #' This theme can be customized using the same arguments as ggplot2::theme.
 #'
-#' @importFrom ggplot2 theme_void
-#' @importFrom ggplot2 theme
+#' @import ggplot2
 #'
 #' @export
 #'

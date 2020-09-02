@@ -4,10 +4,9 @@
 \name{ggwebthemes}
 \alias{ggwebthemes}
 \alias{ggwebthemes-package}
-\title{ggwebthemes: Some ggplot2 themes optimized for blogs.}
+\title{Some ggplot2 themes optimized for blogs.}
 \description{
-This package provides a collection of some ggplot2 themes
-optimized for use in blogs (and similar online usage).
+Some ggplot2 themes optimized for blogs and similar online usage.
 }
 \seealso{
 \url{https://ggplot2.tidyverse.org/reference/ggtheme.html}
