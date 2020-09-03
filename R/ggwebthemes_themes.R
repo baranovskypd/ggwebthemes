@@ -1,6 +1,6 @@
 #' ggplot2::theme_bw optimized for the web.
 #'
-#' Custom ggplot2 theme for blogs (and similar online usage).
+#' Custom ggplot2 theme for blogs and similar online usage.
 #'
 #' This theme can be customized using the same arguments as ggplot2::theme.
 #'
@@ -12,7 +12,7 @@
 #' \dontrun{
 #' library("dplyr")
 #' library("palmerpenguins")
-#' palmerpenguins::penguins %>%
+#' penguins %>%
 #'   group_by(species) %>%
 #'   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
 #'   facet_wrap(~ species, scales = "free_x") +
@@ -50,7 +50,7 @@ theme_web_bw <- function() {
 
 #' ggplot2::theme_classic optimized for the web.
 #'
-#' Custom ggplot2 theme for blogs (and similar online usage).
+#' Custom ggplot2 theme for blogs and similar online usage.
 #'
 #' This theme can be customized using the same arguments as ggplot2::theme.
 #'
@@ -62,7 +62,7 @@ theme_web_bw <- function() {
 #' \dontrun{
 #' library("dplyr")
 #' library("palmerpenguins")
-#' palmerpenguins::penguins %>%
+#' penguins %>%
 #'   group_by(species) %>%
 #'   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
 #'   facet_wrap(~ species, scales = "free_x") +
@@ -98,7 +98,7 @@ theme_web_classic <- function() {
 
 #' ggplot2::theme_void optimized for the web.
 #'
-#' Custom ggplot2 theme for blogs (and similar online usage).
+#' Custom ggplot2 theme for blogs and similar online usage.
 #'
 #' This theme can be customized using the same arguments as ggplot2::theme.
 #'
@@ -110,7 +110,7 @@ theme_web_classic <- function() {
 #' \dontrun{
 #' library("dplyr")
 #' library("palmerpenguins")
-#' palmerpenguins::penguins %>%
+#' penguins %>%
 #'   group_by(species) %>%
 #'   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
 #'   facet_wrap(~ species, scales = "free_x") +

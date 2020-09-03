@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ggwebthemes
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This R package contains some themes for <span style="font-family:Inconsolata; background-color:#EEE; font-size:1.1em">ggplot2</span> that were optimized for use in blogs and for similar online usage. Package source code is available [here](https://gitlab.com/peterbar/ggwebthemes). You can find a post about this package on [Data Enthusiast's Blog](https://dataenthusiast.ca/).
+
+## Installation
+
+The package is not yet on CRAN. You can install the released version of <span style="font-family:Inconsolata; background-color:#EEE; font-size:1.1em">ggwebthemes</span> from [GitLab](https://gitlab.com/):
+
+``` r
+# option 1: install using devtools
+devtools::install_gitlab("peterbar/ggwebthemes")
+    
+# option 2: install using remotes
+remotes::install_gitlab("peterbar/ggwebthemes")
+```
+
+## Examples
+
+```{r example}
+library(ggwebthemes)
+# example
+```

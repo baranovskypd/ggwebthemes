@@ -7,7 +7,7 @@
 theme_web_classic()
 }
 \description{
-Custom ggplot2 theme for blogs (and similar online usage).
+Custom ggplot2 theme for blogs and similar online usage.
 }
 \details{
 This theme can be customized using the same arguments as ggplot2::theme.
@@ -16,7 +16,7 @@ This theme can be customized using the same arguments as ggplot2::theme.
 \dontrun{
 library("dplyr")
 library("palmerpenguins")
-palmerpenguins::penguins \%>\%
+penguins \%>\%
   group_by(species) \%>\%
   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
   facet_wrap(~ species, scales = "free_x") +
