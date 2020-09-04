@@ -7,6 +7,7 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  fig.show = "hide",
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
@@ -18,11 +19,15 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-This R package contains some themes for <span style="font-family:Inconsolata; background-color:#EEE; font-size:1.1em">ggplot2</span> that were optimized for use in blogs and for similar online usage. Package source code is available [here](https://gitlab.com/peterbar/ggwebthemes). You can find a post about this package on [Data Enthusiast's Blog](https://dataenthusiast.ca/).
+This R package contains some themes for <font size="4">``ggplot2``</font> that were optimized for use in blogs and for similar online usage. Package source code is available [on GitLab](https://gitlab.com/peterbar/ggwebthemes). You can find a post about this package on [Data Enthusiast's Blog](https://dataenthusiast.ca/).
+
+Note: the package repository is also mirrorred to GitHub, primarily in order for <font size="4">``available::available("ggwebthemes")``</font> to show that the package name was taken; <font size="4">``ggwebthemes``</font> home is on GitLab.
+
+Submit bug reports, issues, and feature requests [here](https://gitlab.com/peterbar/ggwebthemes/-/issues).
 
 ## Installation
 
-The package is not yet on CRAN. You can install the released version of <span style="font-family:Inconsolata; background-color:#EEE; font-size:1.1em">ggwebthemes</span> from [GitLab](https://gitlab.com/):
+The package is not yet on CRAN. You can install <font size="4">``ggwebthemes``</font> from GitLab:
 
 ``` r
 # option 1: install using devtools
@@ -36,5 +41,53 @@ remotes::install_gitlab("peterbar/ggwebthemes")
 
 ```{r example}
 library(ggwebthemes)
-# example
+library(palmerpenguins)
+
+
+# theme_web_bw()
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
+  facet_wrap(~ species, scales = "free_x") +
+  geom_point(size = 2, na.rm = TRUE) +
+  geom_smooth(formula = y ~ x,
+              method = "lm",
+              se = FALSE,
+              na.rm = TRUE) +
+  theme_web_bw() +
+  labs(x = "Bill length, mm",
+       y = "Body mass, grams",
+       title = "Body Mass vs. Bill Length in Penguins",
+       subtitle = "Grouped by Species",
+       caption = "Data: Gorman, Williams, and Fraser 2014")
+
+
+# theme_web_classic()
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
+  facet_wrap(~ species, scales = "free_x") +
+  geom_point(size = 2, na.rm = TRUE) +
+  geom_smooth(formula = y ~ x,
+              method = "lm",
+              se = FALSE,
+              na.rm = TRUE) +
+  theme_web_classic() +
+  labs(x = "Bill length, mm",
+       y = "Body mass, grams",
+       title = "Body Mass vs. Bill Length in Penguins",
+       subtitle = "Grouped by Species",
+       caption = "Data: Gorman, Williams, and Fraser 2014")
+
+
+# theme_web_void()
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
+  facet_wrap(~ species, scales = "free_x") +
+  geom_point(size = 2, na.rm = TRUE) +
+  geom_smooth(formula = y ~ x,
+              method = "lm",
+              se = FALSE,
+              na.rm = TRUE) +
+  theme_web_void() +
+  labs(x = "Bill length, mm",
+       y = "Body mass, grams",
+       title = "Body Mass vs. Bill Length in Penguins",
+       subtitle = "Grouped by Species",
+       caption = "Data: Gorman, Williams, and Fraser 2014")
 ```

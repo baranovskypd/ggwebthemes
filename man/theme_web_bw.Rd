@@ -13,12 +13,23 @@ Custom ggplot2 theme for blogs and similar online usage.
 This theme can be customized using the same arguments as ggplot2::theme.
 }
 \examples{
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+facet_wrap(~ Species, scales = "free_x") +
+  geom_point(size = 2, na.rm = TRUE) +
+  geom_smooth(formula = y ~ x,
+              method = "lm",
+              se = FALSE,
+              na.rm = TRUE) +
+  theme_web_bw() +
+  labs(x = "Sepal Width",
+       y = "Sepal Length",
+       title = "Sepal Length vs. Sepal Width in Irises",
+       subtitle = "Grouped by Species",
+       caption = "Data: Fisher 1936")
+
 \dontrun{
-library("dplyr")
-library("palmerpenguins")
-penguins \%>\%
-  group_by(species) \%>\%
-  ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+library(palmerpenguins)
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
   facet_wrap(~ species, scales = "free_x") +
   geom_point(size = 2, na.rm = TRUE) +
   geom_smooth(formula = y ~ x,
@@ -28,7 +39,7 @@ penguins \%>\%
   theme_web_bw() +
   labs(x = "Bill length, mm",
        y = "Body mass, grams",
-       title = "Body Mass to Bill Length in Adelie, Chinstrap, and Gentoo Penguins",
+       title = "Body Mass vs. Bill Length in Penguins",
        subtitle = "Grouped by Species",
        caption = "Data: Gorman, Williams, and Fraser 2014")
 }

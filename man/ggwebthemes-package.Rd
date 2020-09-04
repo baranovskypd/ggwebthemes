@@ -11,6 +11,7 @@ Some ggplot2 themes optimized for blogs and similar online usage.
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://gitlab.com/peterbar/ggwebthemes/}
   \item \url{https://dataenthusiast.ca/}
   \item Report bugs at \url{https://gitlab.com/peterbar/ggwebthemes/-/issues}
 }

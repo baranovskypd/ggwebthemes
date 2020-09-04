@@ -1,18 +1,16 @@
 Package: ggwebthemes
 Title: Some ggplot2 Themes Optimized for Blogs
-Version: 0.0.0.9400
-Date: 2020-09-03
+Version: 0.1.0
+Date: 2020-09-04
 Author: Petr Baranovskiy [aut], [cre]
 Maintainer: Petr Baranovskiy <peterbar@protonmail.com>
 Description: Some ggplot2 themes optimized for blogs and similar online usage.
-Imports: 
-    ggplot2
-Suggests: 
-    dplyr,
-    palmerpenguins  
+Depends: ggplot2
+Suggests: palmerpenguins  
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-URL: https://dataenthusiast.ca/
+URL: https://gitlab.com/peterbar/ggwebthemes/, 
+    https://dataenthusiast.ca/
 BugReports: https://gitlab.com/peterbar/ggwebthemes/-/issues

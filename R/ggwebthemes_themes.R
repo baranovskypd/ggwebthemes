@@ -9,12 +9,23 @@
 #' @export
 #'
 #' @examples
+#' ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+#' facet_wrap(~ Species, scales = "free_x") +
+#'   geom_point(size = 2, na.rm = TRUE) +
+#'   geom_smooth(formula = y ~ x,
+#'               method = "lm",
+#'               se = FALSE,
+#'               na.rm = TRUE) +
+#'   theme_web_bw() +
+#'   labs(x = "Sepal Width",
+#'        y = "Sepal Length",
+#'        title = "Sepal Length vs. Sepal Width in Irises",
+#'        subtitle = "Grouped by Species",
+#'        caption = "Data: Fisher 1936")
+#'
 #' \dontrun{
-#' library("dplyr")
-#' library("palmerpenguins")
-#' penguins %>%
-#'   group_by(species) %>%
-#'   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+#' library(palmerpenguins)
+#' ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
 #'   facet_wrap(~ species, scales = "free_x") +
 #'   geom_point(size = 2, na.rm = TRUE) +
 #'   geom_smooth(formula = y ~ x,
@@ -24,7 +35,7 @@
 #'   theme_web_bw() +
 #'   labs(x = "Bill length, mm",
 #'        y = "Body mass, grams",
-#'        title = "Body Mass to Bill Length in Adelie, Chinstrap, and Gentoo Penguins",
+#'        title = "Body Mass vs. Bill Length in Penguins",
 #'        subtitle = "Grouped by Species",
 #'        caption = "Data: Gorman, Williams, and Fraser 2014")
 #' }
@@ -43,6 +54,7 @@ theme_web_bw <- function() {
           legend.title = element_text(size = 14, face = "bold"),
           legend.text = element_text(size = 14),
           strip.text = element_text(size = 13, face = "bold"),
+          panel.spacing = unit(1, "lines"),
           axis.text = element_text(size = 13),
           axis.title.x = element_text(margin = margin(t = 10), size = 14),
           axis.title.y = element_text(margin = margin(r = 10), size = 14))
@@ -59,12 +71,23 @@ theme_web_bw <- function() {
 #' @export
 #'
 #' @examples
+#' ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+#' facet_wrap(~ Species, scales = "free_x") +
+#'   geom_point(size = 2, na.rm = TRUE) +
+#'   geom_smooth(formula = y ~ x,
+#'               method = "lm",
+#'               se = FALSE,
+#'               na.rm = TRUE) +
+#'   theme_web_classic() +
+#'   labs(x = "Sepal Width",
+#'        y = "Sepal Length",
+#'        title = "Sepal Length vs. Sepal Width in Irises",
+#'        subtitle = "Grouped by Species",
+#'        caption = "Data: Fisher 1936")
+#'
 #' \dontrun{
-#' library("dplyr")
-#' library("palmerpenguins")
-#' penguins %>%
-#'   group_by(species) %>%
-#'   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+#' library(palmerpenguins)
+#' ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
 #'   facet_wrap(~ species, scales = "free_x") +
 #'   geom_point(size = 2, na.rm = TRUE) +
 #'   geom_smooth(formula = y ~ x,
@@ -74,7 +97,7 @@ theme_web_bw <- function() {
 #'   theme_web_classic() +
 #'   labs(x = "Bill length, mm",
 #'        y = "Body mass, grams",
-#'        title = "Body Mass to Bill Length in Adelie, Chinstrap, and Gentoo Penguins",
+#'        title = "Body Mass vs. Bill Length in Penguins",
 #'        subtitle = "Grouped by Species",
 #'        caption = "Data: Gorman, Williams, and Fraser 2014")
 #' }
@@ -91,6 +114,7 @@ theme_web_classic <- function() {
           legend.title = element_text(size = 14, face = "bold"),
           legend.text = element_text(size = 14),
           strip.text = element_text(size = 13, face = "bold"),
+          panel.spacing = unit(1, "lines"),
           axis.text = element_text(size = 13),
           axis.title.x = element_text(margin = margin(t = 10), size = 14),
           axis.title.y = element_text(margin = margin(r = 10), size = 14))
@@ -107,12 +131,23 @@ theme_web_classic <- function() {
 #' @export
 #'
 #' @examples
+#' ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+#' facet_wrap(~ Species, scales = "free_x") +
+#'   geom_point(size = 2, na.rm = TRUE) +
+#'   geom_smooth(formula = y ~ x,
+#'               method = "lm",
+#'               se = FALSE,
+#'               na.rm = TRUE) +
+#'   theme_web_void() +
+#'   labs(x = "Sepal Width",
+#'        y = "Sepal Length",
+#'        title = "Sepal Length vs. Sepal Width in Irises",
+#'        subtitle = "Grouped by Species",
+#'        caption = "Data: Fisher 1936")
+#'
 #' \dontrun{
-#' library("dplyr")
-#' library("palmerpenguins")
-#' penguins %>%
-#'   group_by(species) %>%
-#'   ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+#' library(palmerpenguins)
+#' ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
 #'   facet_wrap(~ species, scales = "free_x") +
 #'   geom_point(size = 2, na.rm = TRUE) +
 #'   geom_smooth(formula = y ~ x, # optional: removes message
@@ -122,7 +157,7 @@ theme_web_classic <- function() {
 #'   theme_web_void() +
 #'   labs(x = "Bill length, mm",
 #'        y = "Body mass, grams",
-#'        title = "Body Mass to Bill Length in Adelie, Chinstrap, and Gentoo Penguins",
+#'        title = "Body Mass vs. Bill Length in Penguins",
 #'        subtitle = "Grouped by Species",
 #'        caption = "Data: Gorman, Williams, and Fraser 2014")
 #' }
